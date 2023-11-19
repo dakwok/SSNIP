@@ -21,8 +21,8 @@ library(tidyverse)
 library(ggsci)
 
 #  Import Files -----------------------------------------------------------
-directory_in  = "/Users/darwinkwok/Documents/UCSF\ 2020\ Okada-Costello\ Lab/Project\ A\ -\ IDH1\ Alternative\ Splicing-Associated\ Neojunctions/03_tpm_filter_10/input"
-directory_out = "/Users/darwinkwok/Documents/UCSF\ 2020\ Okada-Costello\ Lab/Project\ A\ -\ IDH1\ Alternative\ Splicing-Associated\ Neojunctions/03_tpm_filter_10/output"
+directory_in  = "{PATH_TO_INPUT}"
+directory_out = "{PATH_TO_OUTPUT}"
 setwd(directory_in)
 
 filename_tpm          = "TcgaTargetGtex_rsem_isoform_log2tpm0001_TCGA_n656__protein_coding_137618tx.txt"  # TPM (Isoform Expression) Table
