@@ -3,7 +3,6 @@
 
 # Purpose: Filter splicing junctions (from STAR aligner's SJ.out.tab file) with GTF file
 #          that has been filtered for protein coding genes and TPM > 10.
-# Pipeline: 1. 
 
 ###########################################################################
 #  Step 0: Load Packages and Data -----------------------------------------
@@ -15,7 +14,7 @@ library(readxl)
 library(tidyverse)
 library(ggsci)
 
-directory_in = "/Users/darwinkwok/Documents/UCSF\ 2020\ Okada-Costello\ Lab/Project\ A\ -\ IDH1\ Alternative\ Splicing-Associated\ Neojunctions/04_extract_annot_sj_to_analyze/input"
+directory_in = "PATH_TO_INPUT"
 setwd(directory_in)
 
 #  Load Files -------------------------------------------------------------
@@ -97,7 +96,7 @@ dataframe_sj.retain %>% pull(chr) %>% table() ;
 #  Step 3: Output Data ----------------------------------------------------
 ###########################################################################
 
-directory_output = "/Users/darwinkwok/Documents/UCSF\ 2020\ Okada-Costello\ Lab/Project\ A\ -\ IDH1\ Alternative\ Splicing-Associated\ Neojunctions/04_extract_annot_sj_to_analyze/output"
+directory_output = "PATH_TO_OUTPUT"
 setwd(directory_output)
 
 filename_output = "SJ_List_Filtered_by_GTF_ProteinCoding_ExpressedTranscripts_20200623"
