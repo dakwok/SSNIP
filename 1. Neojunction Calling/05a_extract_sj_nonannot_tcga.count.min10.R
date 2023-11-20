@@ -18,16 +18,16 @@ library(readxl)
 library(tidyverse)
 library(ggsci)
 
-directory_in = "/Users/darwinkwok/Desktop/cclc01/okadalab/data1/dkwok/proj_01_altspl/05_extract_non_annot_sj_min_count_10_in_tcga_n429/input"
+directory_in = "PATH_TO_INPUT"
 setwd(directory_in)
 
 # Directory for the TCGA GBM SJ RNA-seq data
 # Contains RNA seq for every TCGA GBM sample in individual files
-directory_in_GBM = "/Users/darwinkwok/Desktop/cclc01/okadalab/data1/dkwok/proj_01_altspl/05_extract_non_annot_sj_min_count_10_in_tcga_n429/input/tcga_gbm_sj_rnaseq"
+directory_in_GBM = "PATH_TO_GBM_RNASEQ"
 
 # Directory for the TCGA LGG SJ RNA-seq data
 # Contains RNA seq for every TCGA LGG sample in individual files
-directory_in_LGG = "/Users/darwinkwok/Desktop/cclc01/okadalab/data1/dkwok/proj_01_altspl/05_extract_non_annot_sj_min_count_10_in_tcga_n429/input/tcga_lgg_sj_rnaseq"
+directory_in_LGG = "PATH_TO_LGG_RNASEQ"
 
 #  Load Files --------------------------------------------------------------
 
@@ -126,7 +126,7 @@ RUNTIME %>% print()
 #  Step 3: Output Data ----------------------------------------------------
 ###########################################################################
 
-directory_output = "/Users/darwinkwok/Documents/UCSF\ 2020\ Okada-Costello\ Lab/Project\ A\ -\ IDH1\ Alternative\ Splicing-Associated\ Neojunctions/05_extract_non_annot_sj_min_count_10_in_tcga_n429/output"
+directory_output = "PATH_TO_OUTPUT"
 setwd(directory_output)
 
 filename_output = "SJ_List_NonAnnotated_Candidates_20200627"
@@ -143,7 +143,6 @@ write_tsv(dataframe_combined, filename_output, na = "NA", col_names = T, quote_e
 
 #  Load Files --------------------------------------------------------------
 
-directory_output = "/Users/darwinkwok/Documents/UCSF\ 2020\ Okada-Costello\ Lab/Project\ A\ -\ IDH1\ Alternative\ Splicing-Associated\ Neojunctions/05_extract_non_annot_sj_min_count_10_in_tcga_n429/output"
 setwd(directory_output)
 
 filename_sj.combined = "SJ_List_NonAnnotated_Candidates_20200627"
@@ -314,8 +313,6 @@ dataframe_sj.psr %>% pull(retain) %>% table() %>% print()
 ###########################################################################
 #  Step 5: Output Data ----------------------------------------------------
 ###########################################################################
-
-directory_output = "/Users/darwinkwok/Documents/UCSF\ 2020\ Okada-Costello\ Lab/Project\ A\ -\ IDH1\ Alternative\ Splicing-Associated\ Neojunctions/05_extract_non_annot_sj_min_count_10_in_tcga_n429/output"
 setwd(directory_output)
 
 filename_output.sj.filtered = "SJ_List_NonAnnotated_Candidates_&_Protein_Coding_20200630"
