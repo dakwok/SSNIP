@@ -20,10 +20,10 @@ library(tidyverse) ;
 library(readxl) ;
 library(ggsci) ;
 
-directory_05a_in  = "/Users/darwinkwok/Desktop/cclc01/okadalab/data1/dkwok/proj_01_altspl/05a_extract_sj_nonannot_tcga.count.min10/input/"
-directory_05a_out = "/Users/darwinkwok/Desktop/cclc01/okadalab/data1/dkwok/proj_01_altspl/05a_extract_sj_nonannot_tcga.count.min10/output/"
-directory_in_GBM = "/Users/darwinkwok/Desktop/cclc01/okadalab/data1/dkwok/proj_01_altspl/05_extract_non_annot_sj_min_count_10_in_tcga_n429/input/tcga_gbm_sj_rnaseq" ; # sj.out.tab of TCGA-GBM
-directory_in_LGG = "/Users/darwinkwok/Desktop/cclc01/okadalab/data1/dkwok/proj_01_altspl/05_extract_non_annot_sj_min_count_10_in_tcga_n429/input/tcga_lgg_sj_rnaseq"; # sj.out.tab of TCG-LGG
+directory_05a_in  = "PATH_TO_INPUT"
+directory_05a_out = "PATH_TO_OUTPUT"
+directory_in_GBM  = "PATH_TO_GBM_INPUT" ; # sj.out.tab of TCGA-GBM
+directory_in_LGG  = "PATH_TO_LGG_INPUT"; # sj.out.tab of TCG-LGG
 
 
 setwd(directory_05a_out) ; 
@@ -103,7 +103,7 @@ dataframe_sj.combined.retain = dataframe_sj.combined.edited %>%
 #  Step 2: Output SJ Data (Filtered for TPM and PC) -----------------------
 ###########################################################################
 
-directory_out = "/Users/darwinkwok/Documents/UCSF\ 2020\ Okada-Costello\ Lab/Project\ A\ -\ IDH1\ Alternative\ Splicing-Associated\ Neojunctions/05_extract_non_annot_sj_min_count_10_in_tcga_n429/output"
+directory_out = "PATH_TO_OUTPUT"
 setwd(directory_out)
 
 filename_output.sj.filtered = "SJ_List_NonAnnotated_Candidates_&_Protein_Coding_20200630"
@@ -118,7 +118,6 @@ write_tsv(dataframe_sj.combined.retain, filename_output.sj.filtered, na = "NA", 
 # by overlaying the list of splicing junctions generated in Step 4 (79,953 junctions) with the 
 # TCGA dataframes for LGG and GBMs
 
-directory_out = "/Users/darwinkwok/Desktop/cclc01/okadalab/data1/dkwok/proj_01_altspl/05_extract_non_annot_sj_min_count_10_in_tcga_n429/output/"
 setwd(directory_out)
 dataframe_sj.combined.retain =  read_tsv("SJ_List_NonAnnotated_Candidates_&_Protein_Coding_20200630.tsv", na = c("", "NA"), col_names = T, col_types = cols(chr = col_character()))
 
