@@ -38,9 +38,9 @@ library(Rsamtools) ;
 
 # Establish Directories ---------------------------------------------------
 
-directory_00 = "/Users/darwinkwok/Desktop/cclc01/okadalab/data1/tnejo/altspl/00_external"
-directory_03 = "/Users/darwinkwok/Desktop/cclc01/okadalab/data1/dkwok/proj_01_altspl/03_tpm_filter_10/output"
-directory_04 = "/Users/darwinkwok/Desktop/cclc01/okadalab/data1/dkwok/proj_01_altspl/04_extract_annot_sj_to_analyze/output"
+directory_00 = "{PATH_TO_EXTERNAL}"
+directory_03 = "{PATH_TO_STEP_03}"
+directory_04 = "{PATH_"
 directory_10 = "/Users/darwinkwok/Desktop/cclc01/costellolab/data5/dkwok/proj_01_altspl/10_extract_neojunctions/out"
 directory_11 = "/Users/darwinkwok/Desktop/cclc01/costellolab/data5/dkwok/proj_01_altspl/11_aaseq_prediction/out"
 
