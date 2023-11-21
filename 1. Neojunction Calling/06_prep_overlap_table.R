@@ -18,11 +18,11 @@ library(data.table)
 
 # Establish Directories ---------------------------------------------------
 
-directory_samples = "/Users/darwinkwok/Desktop/cclc01/okadalab/data1/dkwok/proj_01_altspl/000_generate_sjouttab_files/2022_0614_spatially_mapped_samples/processed_data/bam"
+directory_samples = "PATH_TO_INPUT"
 
-directory_04 = "/Users/darwinkwok/Desktop/cclc01/okadalab/data1/dkwok/proj_01_altspl/04_extract_annot_sj_to_analyze/output"
-directory_05 = "/Users/darwinkwok/Desktop/cclc01/okadalab/data1/dkwok/proj_01_spatial/05_extract_sj_nonannot/out"
-directory_06 = "/Users/darwinkwok/Desktop/cclc01/okadalab/data1/dkwok/proj_01_spatial/06_prep_overlap_table/out"
+directory_04 = "PATH_TO_STEP04_OUTPUT"
+directory_05 = "PATH_TO_STEP05_OUTPUT"
+directory_06 = "PATH_TO_STEP06_OUTPUT"
 
 # Load Files --------------------------------------------------------------
 # From Step 4: SJ ID's (Annotated)
