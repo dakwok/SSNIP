@@ -20,10 +20,10 @@ library(data.table)
 
 # Establish Directories ---------------------------------------------------
 
-directory_out.step01 = "/Users/darwinkwok/Desktop/cclc01/okadalab/data1/dkwok/proj_01_altspl/01_tumor_purity/output"
-directory_out.step06 = "/Users/darwinkwok/Desktop/cclc01/okadalab/data1/dkwok/proj_01_altspl/06_prep_overlap_table/output"
+directory_out.step01 = "PATH_TO_STEP01_OUTPUT"
+directory_out.step06 = "PATH_TO_STEP06_OUTPUT"
 
-directory_out = "/Users/darwinkwok/Desktop/cclc01/okadalab/data1/dkwok/proj_01_altspl/07_count_depth_freq_judge_psr/output"
+directory_out = "PATH_TO_STEP07_OUTPUT"
 
 # Load Files --------------------------------------------------------------
 
@@ -200,9 +200,6 @@ names(cases_idh) = c("all", "IDHmut-A", "IDHmut-O", "IDHwt-A", "IDHmut-GBM", "ID
 list_project = list(cases, cases_idh)
 list_judge.all = list(judge.all_cases = NULL, judge.all_cases_idh = NULL)
 
-# To avoid re-running the code, I'm copying the link to the file here (2023_0223)
-judge = read_tsv("/Users/darwinkwok/Documents/Documents/UCSF\ 2020\ Okada-Costello\ Lab/Project\ A\ -\ IDH1\ Alternative\ Splicing-Associated\ Neojunctions/07_count_depth_freq_judge_psr/output/2021_0827_judge_pass_filter_in_tcga_n429_without_PSR_0.1_filter.tsv", col_names = T)
-
 # 2b. Calculate the positive sample rates for all of the disease subtypes
 for (h in 1:length(list_project)){
   project = list_project[[h]]
@@ -359,65 +356,3 @@ write_tsv(judge.all_cases.idh, filename_judge.all.2, na = "NA", col_names = T, q
 # Overlap Table
 filename_overlap.2 = "IDH_Overlap_Table_Retained_and_Passed_Junctions_20200818"
 write_tsv(dataframe_overlap.table.2, filename_overlap.2, na = "NA", col_names = T, quote_escape = "double") ;
-
-
-
-###########################################################################
-# Step 5: Confirm Output Files with Takahide's Files ---------------------- 
-###########################################################################
-
-directory_taka = "/Users/darwinkwok/Desktop/cclc01/okadalab/data1/tnejo/altspl/07_count_depth_freq_judge_psr/out/each_chr"
-setwd(directory_taka)
-
-filename_taka_count = "07102020_count_pass_filter_in_tcga_n429_chr_1.tsv"
-filename_taka_depth = "07102020_depth_pass_filter_in_tcga_n429_chr_1.tsv"
-filename_taka_freq  = "07102020_freq_pass_filter_in_tcga_n429_chr_1.tsv"
-filename_taka_judge = "07102020_judge_pass_filter_in_tcga_n429_chr_1.tsv"
-filename_taka_judge.all = "07102020_junc_id_overlap_table_pass_filter_in_tcga_n429_chr_1.tsv"
-filename_taka_overlap = "07102020_psr_pass_filter_in_tcga_n429_chr_1.tsv"
-
-# Check Count Table
-dataframe_taka_count = read_tsv(filename_taka_count, na = c("", "NA"), col_names = T, col_types = cols(chr = col_character())) ; # non-annot pass-filter junc.ids 
-dataframe_count.pass.chr1 = dataframe_count.pass.1 %>% 
-  dplyr::filter(grepl("chr1:", junc.id))
-identical(sort(dataframe_taka_count$junc.id), sort(dataframe_count.pass.chr1$junc.id))
-# TRUE
-
-
-# Check Depth Table
-dataframe_taka_depth = read_tsv(filename_taka_depth, na = c("", "NA"), col_names = T, col_types = cols(chr = col_character())) ; # non-annot pass-filter junc.ids 
-dataframe_depth.pass.chr1 = dataframe_depth.pass.1 %>% 
-  dplyr::filter(grepl("chr1:", junc.id))
-identical(sort(dataframe_taka_depth$junc.id), sort(dataframe_depth.pass.chr1$junc.id))
-# TRUE
-
-
-# Check Frequency Table
-dataframe_taka_freq = read_tsv(filename_taka_freq, na = c("", "NA"), col_names = T, col_types = cols(chr = col_character())) ; # non-annot pass-filter junc.ids 
-dataframe_freq.pass.chr1 = dataframe_freq.pass.1 %>% 
-  dplyr::filter(grepl("chr1:", junc.id))
-identical(sort(dataframe_taka_freq$junc.id), sort(dataframe_freq.pass.chr1$junc.id))
-# TRUE
-
-
-# Check Judgement Table
-dataframe_taka_judge = read_tsv(filename_taka_judge, na = c("", "NA"), col_names = T, col_types = cols(chr = col_character())) ; # non-annot pass-filter junc.ids 
-dataframe_freq.judge.chr1 = dataframe_judge.pass.1 %>% 
-  dplyr::filter(grepl("chr1:", junc.id))
-identical(sort(dataframe_taka_judge$junc.id), sort(dataframe_freq.judge.chr1$junc.id))
-# TRUE
-
-
-# Check Raw PSR/Judgement Table
-dataframe_taka_judge.all = read_tsv(filename_taka_judge.all, na = c("", "NA"), col_names = T, col_types = cols(chr = col_character())) ; # non-annot pass-filter junc.ids 
-dataframe_freq.judge.all.chr1 = dataframe_judge.all.1 %>% 
-  dplyr::filter(grepl("chr1:", junc.id))
-identical(sort(dataframe_taka_judge.all$junc.id), sort(dataframe_freq.judge.all.chr1$junc.id))
-
-
-# Check Overlap Table
-dataframe_taka_overlap = read_tsv(filename_taka_overlap, na = c("", "NA"), col_names = T, col_types = cols(chr = col_character())) ; # non-annot pass-filter junc.ids 
-dataframe_overlap.chr1 = dataframe_overlap.table.1 %>% 
-  dplyr::filter(grepl("chr1:", junc.id))
-identical(sort(dataframe_taka_overlap$junc.id), sort(dataframe_overlap.chr1$junc.id))
-# TRUE
