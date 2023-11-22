@@ -21,17 +21,12 @@ library(data.table)
 directory_samples = "PATH_TO_GTEx_SJOUTTAB_FILES"
 directory_meta    = "PATH_TO_GTEx_META"
 
-#directory_04  = "/okadalab/data1/dkwok/proj_01_altspl/04_extract_annot_sj_to_analyze/output"
-directory_05  = "/okadalab/data1/dkwok/proj_01_spatial/05_extract_sj_nonannot/out"
-directory_out = "/costellolab/data5/dkwok/proj_01_altspl/08_overlap_table_gtex/out"
+directory_05  = "PATH_TO_STEP05_OUT"
+directory_out = "PATH_TO_STEP08_OUT"
 
 # Load Files --------------------------------------------------------------
-# From Step 4: SJ ID's (Annotated)
 # THESE ARE THE SJ LIST OF THE ANNOTATED JUNCTIONS FROM THE TCGA
-#setwd(directory_04)
-#filename_sj.annot = "SJ_List_Filtered_by_GTF_ProteinCoding_ExpressedTranscripts_20200623.tsv"
-#dataframe_sj.annot = read_tsv(filename_sj.annot, na = c("", "NA"), col_names = T, col_types = c(chr = col_character())) ; # non-annot pass-filter junc.ids 
-setwd("/costellolab/data5/dkwok/proj_01_pancancer/05_overlap_and_judge_gtex/out_b")
+setwd(directory_05)
 dataframe_sj.annot = read_tsv("2023_0508_sj_list_gtf_proteincoding_tpm10_gtex_GBM.tsv", col_names = T)
 
 # From Step 5b: SJ PSR's (Non-Annotated with Read Count > 10, PSR > 10, and Protein Coding)
