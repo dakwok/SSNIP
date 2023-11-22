@@ -18,8 +18,8 @@ library(data.table)
 
 # Establish Directories ---------------------------------------------------
 
-directory_samples = "/okadalab/data2/shared/gtex/gtex_rnaseq/sj"
-directory_meta    = "/okadalab/data1/dkwok/external/meta_gtex"
+directory_samples = "PATH_TO_GTEx_SJOUTTAB_FILES"
+directory_meta    = "PATH_TO_GTEx_META"
 
 #directory_04  = "/okadalab/data1/dkwok/proj_01_altspl/04_extract_annot_sj_to_analyze/output"
 directory_05  = "/okadalab/data1/dkwok/proj_01_spatial/05_extract_sj_nonannot/out"
