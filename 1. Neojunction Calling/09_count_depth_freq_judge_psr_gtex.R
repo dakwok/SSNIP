@@ -32,10 +32,10 @@ library(ggsci)
 
 # Establish Directories ---------------------------------------------------
 
-directory_external   = "/Users/darwinkwok/Desktop/cclc01/okadalab/data1/tnejo/altspl/00_external"
-directory_07  = "/Users/darwinkwok/Desktop/cclc01/okadalab/data1/dkwok/proj_01_altspl/07_count_depth_freq_judge_psr/output"
-directory_08  = "/Users/darwinkwok/Desktop/cclc01/costellolab/data5/dkwok/proj_01_altspl/08_overlap_table_gtex/out/"
-directory_out = "/Users/darwinkwok/Desktop/cclc01/costellolab/data5/dkwok/proj_01_altspl/09_count_depth_freq_judge_psr_gtex/out/"
+directory_external   = "{PATH_TO_GTEX_ANNOTATION}"
+directory_07  = "{PATH_TO_STEP07_OUTPUT}"
+directory_08  = "{PATH_TO_STEP08_OUTPUT}"
+directory_out = "{PATH_TO_STEP09_OUTPUT}"
 
 # Load Files --------------------------------------------------------------
 # From External: GTEx Information Dataframe
