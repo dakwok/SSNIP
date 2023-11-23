@@ -20,10 +20,10 @@ library(data.table)
 
 # Establish Directories ---------------------------------------------------
 
-directory_out.step01 = "PATH_TO_STEP01_OUTPUT"
-directory_out.step06 = "PATH_TO_STEP06_OUTPUT"
+directory_out.step01 = "{PATH_TO_STEP01_OUTPUT}"
+directory_out.step06 = "{PATH_TO_STEP06_OUTPUT}"
 
-directory_out = "PATH_TO_STEP07_OUTPUT"
+directory_out = "{PATH_TO_STEP07_OUTPUT}"
 
 # Load Files --------------------------------------------------------------
 
