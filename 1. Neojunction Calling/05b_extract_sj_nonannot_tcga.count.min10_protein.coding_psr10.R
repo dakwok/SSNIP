@@ -20,10 +20,10 @@ library(tidyverse) ;
 library(readxl) ;
 library(ggsci) ;
 
-directory_05a_in  = "PATH_TO_INPUT"
-directory_05a_out = "PATH_TO_OUTPUT"
-directory_in_GBM  = "PATH_TO_GBM_INPUT" ; # sj.out.tab of TCGA-GBM
-directory_in_LGG  = "PATH_TO_LGG_INPUT"; # sj.out.tab of TCG-LGG
+directory_05a_in  = "{PATH_TO_INPUT}"
+directory_05a_out = "{PATH_TO_OUTPUT}"
+directory_in_GBM  = "{PATH_TO_GBM_INPUT}" ; # sj.out.tab of TCGA-GBM
+directory_in_LGG  = "{PATH_TO_LGG_INPUT}"; # sj.out.tab of TCG-LGG
 
 
 setwd(directory_05a_out) ; 
@@ -103,7 +103,7 @@ dataframe_sj.combined.retain = dataframe_sj.combined.edited %>%
 #  Step 2: Output SJ Data (Filtered for TPM and PC) -----------------------
 ###########################################################################
 
-directory_out = "PATH_TO_OUTPUT"
+directory_out = "{PATH_TO_OUTPUT}"
 setwd(directory_out)
 
 filename_output.sj.filtered = "SJ_List_NonAnnotated_Candidates_&_Protein_Coding_20200630"
