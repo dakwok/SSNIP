@@ -14,7 +14,7 @@ library(readxl)
 library(tidyverse)
 library(ggsci)
 
-directory_in = "PATH_TO_INPUT"
+directory_in = "{PATH_TO_INPUT}"
 setwd(directory_in)
 
 #  Load Files -------------------------------------------------------------
