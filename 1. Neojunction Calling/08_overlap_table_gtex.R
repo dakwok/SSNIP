@@ -18,11 +18,11 @@ library(data.table)
 
 # Establish Directories ---------------------------------------------------
 
-directory_samples = "PATH_TO_GTEx_SJOUTTAB_FILES"
-directory_meta    = "PATH_TO_GTEx_META"
+directory_samples = "{PATH_TO_GTEx_SJOUTTAB_FILES}"
+directory_meta    = "{PATH_TO_GTEx_META}"
 
-directory_05  = "PATH_TO_STEP05_OUT"
-directory_out = "PATH_TO_STEP08_OUT"
+directory_05  = "{PATH_TO_STEP05_OUT}"
+directory_out = "{PATH_TO_STEP08_OUT}"
 
 # Load Files --------------------------------------------------------------
 # THESE ARE THE SJ LIST OF THE ANNOTATED JUNCTIONS FROM THE TCGA
