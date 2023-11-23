@@ -18,11 +18,11 @@ library(data.table)
 
 # Establish Directories ---------------------------------------------------
 
-directory_samples = "PATH_TO_INPUT"
+directory_samples = "{PATH_TO_INPUT}"
 
-directory_04 = "PATH_TO_STEP04_OUTPUT"
-directory_05 = "PATH_TO_STEP05_OUTPUT"
-directory_06 = "PATH_TO_STEP06_OUTPUT"
+directory_04 = "{PATH_TO_STEP04_OUTPUT}"
+directory_05 = "{PATH_TO_STEP05_OUTPUT}"
+directory_06 = "{PATH_TO_STEP06_OUTPUT}"
 
 # Load Files --------------------------------------------------------------
 # From Step 4: SJ ID's (Annotated)
