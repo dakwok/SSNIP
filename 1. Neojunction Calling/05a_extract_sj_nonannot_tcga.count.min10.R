@@ -18,16 +18,16 @@ library(readxl)
 library(tidyverse)
 library(ggsci)
 
-directory_in = "PATH_TO_INPUT"
+directory_in = "{PATH_TO_INPUT}"
 setwd(directory_in)
 
 # Directory for the TCGA GBM SJ RNA-seq data
 # Contains RNA seq for every TCGA GBM sample in individual files
-directory_in_GBM = "PATH_TO_GBM_RNASEQ"
+directory_in_GBM = "{PATH_TO_GBM_RNASEQ}"
 
 # Directory for the TCGA LGG SJ RNA-seq data
 # Contains RNA seq for every TCGA LGG sample in individual files
-directory_in_LGG = "PATH_TO_LGG_RNASEQ"
+directory_in_LGG = "{PATH_TO_LGG_RNASEQ}"
 
 #  Load Files --------------------------------------------------------------
 
