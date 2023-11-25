@@ -17,10 +17,10 @@ library(ggsci)
 
 # Establish Directories ---------------------------------------------------
 
-directory_external   = "/Users/darwinkwok/Desktop/cclc01/okadalab/data1/tnejo/altspl/00_external"
-directory_out.step07 = "/Users/darwinkwok/Desktop/cclc01/okadalab/data1/dkwok/proj_01_altspl/07_count_depth_freq_judge_psr/output"
-directory_out.step09 = "/Users/darwinkwok/Desktop/cclc01/costellolab/data5/dkwok/proj_01_altspl/09_count_depth_freq_judge_psr_gtex/out"
-directory_out.step10 = "/Users/darwinkwok/Desktop/cclc01/costellolab/data5/dkwok/proj_01_altspl/10_extract_neojunctions/out"
+directory_external   = "{PATH_TO_META_FILES}"
+directory_out.step07 = "{PATH_TO_STEP07_OUTPUT}"
+directory_out.step09 = "{PATH_TO_STEP09_OUTPUT}"
+directory_out.step10 = "{PATH_TO_STEP10_OUTPUT}"
 
 
 # Load Files --------------------------------------------------------------
