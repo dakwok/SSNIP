@@ -15,10 +15,10 @@ library(tidyverse)
 
 # Establish Directories ---------------------------------------------------
 
-directory_00 = "/okadalab/data1/tnejo/altspl/00_external"
-directory_01 = "/okadalab/data1/dkwok/proj_01_altspl/01_tumor_purity/output"
-directory_11 = "/costellolab/data5/dkwok/proj_01_altspl/11_aaseq_prediction/out"
-directory_12 = "/Users/darwinkwok/Desktop/cclc01/costellolab/data5/dkwok/proj_01_altspl/12_nmer_generation/out"
+directory_00 = "{PATH_TO_META_FILES}"
+directory_01 = "{PATH_TO_STEP01_OUTPUT}"
+directory_11 = "{PATH_TO_STEP11_OUTPUT}"
+directory_12 = "{PATH_TO_STEP12_OUTPUT}"
 
 # Load Files --------------------------------------------------------------
 
@@ -210,7 +210,7 @@ nmer_10 = read_tsv(filename_10mer, na = c("", "NA"),)
 nmer_11 = read_tsv(filename_11mer, na = c("", "NA"),)
 
 # From External: FASTA File containing all proteins
-setwd("/Users/darwinkwok/Desktop/cclc01/okadalab/data1/dkwok/external/fasta_uniprot")
+setwd("{PATH_TO_FASTA_UNIPROT")
 filename_fasta = "UP000005640_9606.fasta"
 fastaFile <- readAAStringSet(filename_fasta)
 seq_name = names(fastaFile)
