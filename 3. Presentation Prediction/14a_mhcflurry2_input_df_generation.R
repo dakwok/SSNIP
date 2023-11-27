@@ -15,8 +15,8 @@ library(readxl)
 library(tidyverse)
 
 #  Load Directories -------------------------------------------------------
-directory_12 = "/Users/darwinkwok/Desktop/cclc01/costellolab/data5/dkwok/proj_01_altspl/12_nmer_generation/out"
-directory_14 = "/Users/darwinkwok/Desktop/cclc01/costellolab/data5/dkwok/proj_01_altspl/14_mhcflurry2_analysis/out"
+directory_12 = "{PATH_TO_STEP12_OUTPUT}"
+directory_14 = "{PATH_TO_STEP14_OUTPUT}"
 
 #  Load Files -------------------------------------------------------------
 setwd(directory_12)
