@@ -59,13 +59,13 @@ mhcflurry-downloads path models_class1_presentation   # This gets the path to th
 # This method requires that you generate a CSV input file in order to run mhcflurry -- refer to the 14_mhcflurry2_input_df_generation.R script
 
 # 8-mer
-mhcflurry-predict /Users/darwinkwok/Desktop/cclc01/costellolab/data5/dkwok/proj_01_altspl/14_mhcflurry2_analysis/out/2023_0812_08mer_mhcflurry_input.csv --out /Users/darwinkwok/Desktop/cclc01/costellolab/data5/dkwok/proj_01_altspl/14_mhcflurry2_analysis/out/2023_0812_08mers_flank_mhcflurry.csv
+mhcflurry-predict {PATH_TO_STEP14_OUTPUT}/2023_0812_08mer_mhcflurry_input.csv --out {PATH_TO_STEP14_OUTPUT}/2023_0812_08mers_flank_mhcflurry.csv
 
 # 9-mer
-mhcflurry-predict /Users/darwinkwok/Desktop/cclc01/costellolab/data5/dkwok/proj_01_altspl/14_mhcflurry2_analysis/out/2023_0812_09mer_mhcflurry_input.csv --out /Users/darwinkwok/Desktop/cclc01/costellolab/data5/dkwok/proj_01_altspl/14_mhcflurry2_analysis/out/2023_0812_09mers_flank_mhcflurry.csv
+mhcflurry-predict {PATH_TO_STEP14_OUTPUT}/2023_0812_09mer_mhcflurry_input.csv --out {PATH_TO_STEP14_OUTPUT}/2023_0812_09mers_flank_mhcflurry.csv
 
 # 10-mer
-mhcflurry-predict /Users/darwinkwok/Desktop/cclc01/costellolab/data5/dkwok/proj_01_altspl/14_mhcflurry2_analysis/out/2023_0812_10mer_mhcflurry_input.csv --out /Users/darwinkwok/Desktop/cclc01/costellolab/data5/dkwok/proj_01_altspl/14_mhcflurry2_analysis/out/2023_0812_10mers_flank_mhcflurry.csv
+mhcflurry-predict {PATH_TO_STEP14_OUTPUT}/2023_0812_10mer_mhcflurry_input.csv --out {PATH_TO_STEP14_OUTPUT}/2023_0812_10mers_flank_mhcflurry.csv
 
 # 11-mer
-mhcflurry-predict /Users/darwinkwok/Desktop/cclc01/costellolab/data5/dkwok/proj_01_altspl/14_mhcflurry2_analysis/out/2023_0812_11mer_mhcflurry_input.csv --out /Users/darwinkwok/Desktop/cclc01/costellolab/data5/dkwok/proj_01_altspl/14_mhcflurry2_analysis/out/2023_0812_11mers_flank_mhcflurry.csv
+mhcflurry-predict {PATH_TO_STEP14_OUTPUT}/2023_0812_11mer_mhcflurry_input.csv --out {PATH_TO_STEP14_OUTPUT}/2023_0812_11mers_flank_mhcflurry.csv
