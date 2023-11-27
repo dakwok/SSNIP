@@ -20,7 +20,7 @@ library("Biostrings") # For opening FASTA
 
 
 #  Load Directories -------------------------------------------------------
-directory_15 = "/Users/darwinkwok/Desktop/cclc01/costellolab/data5/dkwok/proj_01_altspl/15_cross_analyze_algorithms/out"
+directory_15 = "{PATH_TO_STEP15_OUTPUT}"
 
 # Load Files --------------------------------------------------------------
 # HLAthena
@@ -33,12 +33,12 @@ df_all =          read_tsv("2023_0812_cross_alg_all_nmers.tsv", col_names = T)
 
 # WT peptide sequences
 # From Step 11: All confirmed aa sequences (WT and MUT)
-setwd("/Users/darwinkwok/Desktop/cclc01/okadalab/data1/dkwok/proj_01_altspl/11_aaseq_prediction/output")
+setwd("{PATH_TO_STEP11_OUTPUT}")
 filename_aa = "20201026_res_aa_prediction_confirmed.tsv"
 aa_table = read_tsv(filename_aa, col_names = T)
 
 # From External: FASTA File containing all proteins
-setwd("/Users/darwinkwok/Desktop/cclc01/okadalab/data1/dkwok/external/fasta_uniprot")
+setwd("{PATH_TO_UNIPROT}")
 filename_fasta = "UP000005640_9606.fasta"
 fastaFile <- readAAStringSet(filename_fasta)
 seq_name = names(fastaFile)
@@ -117,9 +117,3 @@ shared_2 = nrow(plot_ha_mf_combined %>% dplyr::filter(shared != "1 Hit (HA or MF
 
 setwd(directory_15)
 write_tsv(plot_ha_mf_combined,   "2023_0812_cross_analysis_summary_ha_mf.tsv", na = "NA", col_names = T, quote_escape = "double")
-
-# test = read_tsv("/Users/darwinkwok/Desktop/cclc01/okadalab/data1/dkwok/proj_01_altspl/12_nmer_generation/output_2022_0801/2022_0801_complete_list_all_nmers.tsv", col_names = T)
-test2 = test[!duplicated(test[c(13,15,16)]),]  # 281,302
-
-test3 = read_tsv("/Users/darwinkwok/Desktop/cclc01/okadalab/data1/dkwok/proj_01_altspl/12_nmer_generation/output_2022_0801/2022_0801_hlathenalist_msic_allmers.tsv", col_names = T)
-test4 = test3[!duplicated(test3[c(1,2,3)]),]  # 17,562
