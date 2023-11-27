@@ -13,8 +13,8 @@ library(readxl)
 library(tidyverse)
 
 #  Load Directories -------------------------------------------------------
-directory_hlathena_output = "/Users/darwinkwok/Desktop/cclc01/costellolab/data5/dkwok/proj_01_altspl/13_hlathena_analysis/out_hlathena/"
-directory_out             = "/Users/darwinkwok/Desktop/cclc01/costellolab/data5/dkwok/proj_01_altspl/13_hlathena_analysis/out_processed_files"
+directory_hlathena_output = "{PATH_TO_HLATHENA_OUTPUT}"
+directory_out             = "{PATH_TO_STEP13_OUTPUT}"
 
 
 # Load Files --------------------------------------------------------------
