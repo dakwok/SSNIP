@@ -20,9 +20,9 @@ font_import()
 loadfonts(device = "pdf")
 
 #  Load Directories -------------------------------------------------------
-directory_13 = "/Users/darwinkwok/Desktop/cclc01/costellolab/data5/dkwok/proj_01_altspl/13_hlathena_analysis/out_processed_files"
-directory_14 = "/Users/darwinkwok/Desktop/cclc01/costellolab/data5/dkwok/proj_01_altspl/14_mhcflurry2_analysis/out"
-directory_15 = "/Users/darwinkwok/Desktop/cclc01/costellolab/data5/dkwok/proj_01_altspl/15_cross_analyze_algorithms/out"
+directory_13 = "{PATH_TO_STEP13_OUTPUT}"
+directory_14 = "{PATH_TO_STEP14_OUTPUT}"
+directory_15 = "{PATH_TO_STEP15_OUTPUT}"
 
 # Load Files --------------------------------------------------------------
 setwd(directory_13)
