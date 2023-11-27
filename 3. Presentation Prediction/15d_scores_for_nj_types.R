@@ -15,7 +15,7 @@ library(RColorBrewer) ;
 library(gridExtra)
 
 # Establish Directories ---------------------------------------------------
-directory_15 = "/Users/darwinkwok/Desktop/cclc01/costellolab/data5/dkwok/proj_01_altspl/15_cross_analyze_algorithms/out"
+directory_15 = "{PATH_TO_STEP15_OUTPUT}"
 
 # Load files --------------------------------------------------------------
 setwd(directory_15)
