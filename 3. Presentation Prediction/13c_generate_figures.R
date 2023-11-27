@@ -18,8 +18,8 @@ font_import()
 loadfonts(device = "pdf")
 
 #  Load Directories -------------------------------------------------------
-directory_13      = "/Users/darwinkwok/Desktop/cclc01/costellolab/data5/dkwok/proj_01_altspl/13_hlathena_analysis/out_processed_files"
-directory_figures = "/Users/darwinkwok/Desktop/cclc01/costellolab/data5/dkwok/proj_01_altspl/13_hlathena_analysis/out_figures"
+directory_13      = "{PATH_TO_STEP13_OUTPUT}"
+directory_figures = "{PATH_TO_STEP13_FIGURES}"
 
 # Load Files --------------------------------------------------------------
 setwd(directory_13)
