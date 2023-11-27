@@ -14,8 +14,8 @@ library(ggsci)
 library(data.table)
 
 #  Load Directories -------------------------------------------------------
-directory_11 = "/Users/darwinkwok/Desktop/cclc01/costellolab/data5/dkwok/proj_01_altspl/11_aaseq_prediction/out"
-directory_15 = "/Users/darwinkwok/Desktop/cclc01/costellolab/data5/dkwok/proj_01_altspl/15_cross_analyze_algorithms/out"
+directory_11 = "{PATH_TO_STEP11_OUTPUT}"
+directory_15 = "{PATH_TO_STEP15_OUTPUT}"
 
 # Load Files --------------------------------------------------------------
 setwd(directory_11)
