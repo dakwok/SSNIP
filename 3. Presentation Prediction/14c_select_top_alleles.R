@@ -13,8 +13,8 @@ library(readxl)
 library(tidyverse)
 
 #  Load Directories -------------------------------------------------------
-directory_14_in  = "/Users/darwinkwok/Desktop/cclc01/costellolab/data5/dkwok/proj_01_altspl/14_mhcflurry2_analysis/out"
-directory_14_out = "/Users/darwinkwok/Desktop/cclc01/costellolab/data5/dkwok/proj_01_altspl/14_mhcflurry2_analysis/out_processed_files"
+directory_14_in  = "{PATH_TO_MHCFLURRY_OUTPUT}"
+directory_14_out = "{PATH_TO_STEP14_OUTPUT}"
 
 # Load Files --------------------------------------------------------------
 setwd(directory_14_in)
