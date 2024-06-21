@@ -3,5 +3,5 @@ The Spatial Splicing-derived Neoantigen Identifier Pipeline (SSNIP) allows for t
 
 Sample input files that are not deposited in EGA can be found in _____ with the corresponding output files found in each step's parent folder.
 
-# 1. Neojunction calling
+## 1. Neojunction calling
 The characterization of neojunctions is first performed by evaluating splice sites in tumor samples derived from TCGA and filtering against splice sites with putative read expression in a normal tissue repository, GTEx (n=9166). 
