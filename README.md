@@ -5,3 +5,5 @@ Sample input files that are not deposited in EGA can be found in _____ with the 
 
 ## 1. Neojunction calling
 The characterization of neojunctions is first performed by evaluating splice sites in tumor samples derived from TCGA and filtering against splice sites with putative read expression in a normal tissue repository, GTEx (n=9166). 
+
+### Yes
